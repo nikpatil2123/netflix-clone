@@ -1,10 +1,8 @@
-import { useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useRef } from 'react';
 import { useMovies } from '../hooks/useMovies';
 import {
   Box,
   Typography,
-  IconButton,
   useTheme,
   useMediaQuery,
   CircularProgress,
@@ -12,10 +10,6 @@ import {
   Fade,
 } from '@mui/material';
 import {
-  ChevronLeft as ChevronLeftIcon,
-  ChevronRight as ChevronRightIcon,
-  PlayArrow,
-  Info,
   Refresh as RefreshIcon,
 } from '@mui/icons-material';
 import FeaturedMovie from '../components/FeaturedMovie';
@@ -23,11 +17,8 @@ import MovieRow from '../components/MovieRow';
 
 const Home = () => {
   const { movieRows, loading, error } = useMovies();
-  const navigate = useNavigate();
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const rowRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
-  const [hoveredMovie, setHoveredMovie] = useState<string | null>(null);
 
   const scroll = (direction: 'left' | 'right', rowTitle: string) => {
     const row = rowRefs.current[rowTitle];

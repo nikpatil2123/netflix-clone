@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Box, Typography, CircularProgress, Grid, Tab, Tabs, Chip, useTheme } from '@mui/material';
+import { Box, Typography, CircularProgress, Grid, Tab, Tabs, Chip } from '@mui/material';
 import { api } from '../services/api';
 import { Movie } from '../services/api';
 import FeaturedMovie from '../components/FeaturedMovie';
@@ -23,8 +23,7 @@ const TvShows = () => {
   const [error, setError] = useState('');
   const [currentTab, setCurrentTab] = useState(0);
   const [currentGenre, setCurrentGenre] = useState('all');
-  const theme = useTheme();
-  
+
   const genres = [
     { label: 'All', value: 'all' },
     { label: 'Drama', value: 'drama' },

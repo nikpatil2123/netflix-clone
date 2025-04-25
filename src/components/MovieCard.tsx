@@ -42,7 +42,6 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie, omdbMovie, delay = 0 }) =>
   const navigate = useNavigate();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  const isTablet = useMediaQuery(theme.breakpoints.down('md'));
 
   const handleTap = (e: React.MouseEvent | React.TouchEvent) => {
     e.preventDefault();

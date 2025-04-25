@@ -3,7 +3,6 @@ import axios from 'axios';
 // TMDB API Configuration
 const TMDB_BASE_URL = 'https://api.themoviedb.org/3';
 const TMDB_API_KEY = import.meta.env.VITE_TMDB_API_KEY || 'fb6a1d3f38c3d97f67df6d5c16b767bf'; // Use your actual API key
-const TMDB_IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/original';
 
 // Create axios instance for TMDB API
 const tmdbAxios = axios.create({

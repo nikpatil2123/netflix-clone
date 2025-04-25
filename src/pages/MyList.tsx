@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  Box, 
-  Typography, 
-  Grid, 
-  CircularProgress, 
+import {
+  Box,
+  Typography,
+  Grid,
+  CircularProgress,
   Container,
   MenuItem,
   Select,
@@ -13,7 +13,7 @@ import {
   Tooltip,
   SelectChangeEvent,
 } from '@mui/material';
-import { Sort as SortIcon, ViewList, ViewModule, Delete as DeleteIcon } from '@mui/icons-material';
+import { ViewList, ViewModule, Delete as DeleteIcon } from '@mui/icons-material';
 import { collection, query, where, getDocs, deleteDoc, doc } from 'firebase/firestore';
 import { auth, db } from '../services/firebase';
 import { Movie } from '../types/movie';
@@ -315,6 +315,7 @@ const MyList: React.FC = () => {
                 </Box>
               </Grid>
             ))}
+
           </Grid>
         )}
       </Container>

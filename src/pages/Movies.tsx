@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Box, Typography, CircularProgress, Grid, Tab, Tabs, Chip, useTheme, useMediaQuery, Container } from '@mui/material';
+import { Box, Typography, CircularProgress, Grid, Tab, Tabs, Chip, useTheme, Container } from '@mui/material';
 import { movieAPI, Movie } from '../services/api';
 import FeaturedMovie from '../components/FeaturedMovie';
 import MovieCard from '../components/MovieCard';
@@ -23,7 +23,6 @@ const Movies = () => {
   const [currentTab, setCurrentTab] = useState(0);
   const [currentGenre, setCurrentGenre] = useState('all');
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const genres = [
     { label: 'All', value: 'all' },
@@ -122,17 +121,17 @@ const Movies = () => {
       )}
 
       <Container maxWidth="xl" sx={{ mt: -10, position: 'relative', zIndex: 2 }}>
-        <Box sx={{ 
-          display: 'flex', 
-          flexDirection: { xs: 'column', sm: 'row' }, 
+        <Box sx={{
+          display: 'flex',
+          flexDirection: { xs: 'column', sm: 'row' },
           alignItems: { xs: 'flex-start', sm: 'center' },
           gap: 2,
-          mb: 4 
+          mb: 4
         }}>
           <Typography variant="h4" sx={{ color: 'white', fontWeight: 'bold' }}>
             Movies
           </Typography>
-          
+
           <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
             {genres.map((genre) => (
               <Chip
@@ -183,13 +182,13 @@ const Movies = () => {
         </Grid>
 
         {filteredMovies.length === 0 && (
-          <Typography 
-            variant="h6" 
-            sx={{ 
-              color: 'white', 
-              textAlign: 'center', 
+          <Typography
+            variant="h6"
+            sx={{
+              color: 'white',
+              textAlign: 'center',
               mt: 4,
-              opacity: 0.7 
+              opacity: 0.7
             }}
           >
             No movies found for the selected filters

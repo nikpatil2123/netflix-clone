@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { 
-  Box, 
-  Container, 
-  Typography, 
-  Grid, 
-  CircularProgress, 
-  TextField, 
+import {
+  Box,
+  Container,
+  Typography,
+  CircularProgress,
+  TextField,
   InputAdornment,
   IconButton,
   Pagination,
@@ -88,7 +87,10 @@ const Search = () => {
   };
 
   // Handle page change
-  const handlePageChange = (event: React.ChangeEvent<unknown>, page: number) => {
+  const handlePageChange = (
+    _: React.ChangeEvent<unknown>,
+    page: number
+  ) => {
     setCurrentPage(page);
     navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}&page=${page}`);
   };

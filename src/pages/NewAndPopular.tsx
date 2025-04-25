@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Box, Typography, CircularProgress, Grid, Tab, Tabs, Container, IconButton, Tooltip } from '@mui/material';
+import { Box, Typography, CircularProgress, Grid, Tab, Tabs, Container } from '@mui/material';
 import { TrendingUp, Star, CalendarToday, Schedule } from '@mui/icons-material';
 import { movieAPI, Movie } from '../services/api';
 import FeaturedMovie from '../components/FeaturedMovie';

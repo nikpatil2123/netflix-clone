@@ -20,7 +20,6 @@ import {
   InputBase,
   ClickAwayListener,
   Fade,
-  Paper,
 } from '@mui/material';
 import {
   Menu as MenuIcon,
