@@ -23,7 +23,7 @@
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/netflix-clone.git # Replace with your repo URL if forked
+    https://github.com/nikpatil2123/netflix-clone.git
     cd netflix-clone
     ```
 
